@@ -28,19 +28,24 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Install Minikube
+      run: |
+        curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+        sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
     - name: Kubectl tool installer
       uses: Azure/setup-kubectl@v4.0.0
 
-    - name: Debug kubeconfig
+    - name: Start Minikube
       run: |
-        cat ~/.kube/config
-        
-    - name: kubectl cluster-info
-      run: kubectl cluster-info
+        minikube start --driver=docker
 
     - name: Debug kubeconfig
       run: |
         cat ~/.kube/config
+
+    - name: kubectl cluster-info
+      run: kubectl cluster-info
 
     - name: Deploy to Kubernetes
       run: |
