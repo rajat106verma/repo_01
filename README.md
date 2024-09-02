@@ -18,12 +18,17 @@ Purpose: Defines the Kubernetes Service configuration that exposes your Node.js 
 5. .github/workflows/ci-cd-pipeline.yml
 Purpose: Defines the GitHub Actions workflow for automating the CI/CD pipeline. It includes steps for building, testing, and deploying your application.
 
-🎨 Enhanced File Descriptions
-1 - server.js: Contains the logic and route handling for your application.
-2 - Dockerfile: Used to build the Docker image. Essential instructions are included, such as FROM node:14, WORKDIR, COPY, and RUN npm install.
-3 - deployment.yaml: Configures how Kubernetes should manage and deploy your application, specifying the number of pods, image version, and other settings.
-4 - service.yaml: Sets up how your application will be accessed. This includes type (e.g., LoadBalancer, ClusterIP) and selector details to route traffic to the correct pods.
-5 - .github/workflows/ci-cd-pipeline.yml: Automates your CI/CD process, including steps for code checkout, Docker image building, testing, and deployment.
+## 🎨 **Enhanced File Descriptions**
+
+- **`server.js`:** Contains the logic and route handling for your application.
+
+- **`Dockerfile`:** Used to build the Docker image. Essential instructions are included, such as `FROM node:14`, `WORKDIR`, `COPY`, and `RUN npm install`.
+
+- **`deployment.yaml`:** Configures how Kubernetes should manage and deploy your application, specifying the number of pods, image version, and other settings.
+
+- **`service.yaml`:** Sets up how your application will be accessed. This includes type (e.g., LoadBalancer, ClusterIP) and selector details to route traffic to the correct pods.
+
+- **`.github/workflows/ci-cd-pipeline.yml`:** Automates your CI/CD process, including steps for code checkout, Docker image building, testing, and deployment.
 
 🛠️ Workflow Overview
 Build: The Docker image is built based on the Dockerfile.
