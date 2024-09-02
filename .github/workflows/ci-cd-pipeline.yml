@@ -14,16 +14,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install Docker Compose
-      run: |
-        choco install docker-compose -y
-        cmd /c "docker-compose --version"  # Run cmd commands using cmd /c
-
-    - name: Set up Docker
-      run: |
-        docker --version
-        cmd /c "docker-compose --version"  # Run cmd commands using cmd /c
-
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
       with:
