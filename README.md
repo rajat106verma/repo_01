@@ -18,7 +18,7 @@ Purpose: Defines the Kubernetes Service configuration that exposes your Node.js 
 5. .github/workflows/ci-cd-pipeline.yml
 Purpose: Defines the GitHub Actions workflow for automating the CI/CD pipeline. It includes steps for building, testing, and deploying your application.
 
-## 🎨 **Enhanced File Descriptions**
+🎨 **Enhanced File Descriptions**
 
 - **`server.js`:** Contains the logic and route handling for your application.
 
