@@ -32,5 +32,7 @@ Purpose: Defines the GitHub Actions workflow for automating the CI/CD pipeline. 
 
 🛠️ Workflow Overview
 Build: The Docker image is built based on the Dockerfile.
+
 Push: The Docker image is pushed to Docker Hub.
+
 Deploy: The application is deployed to a Kubernetes cluster using the deployment.yaml and service.yaml files.
