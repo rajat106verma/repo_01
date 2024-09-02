@@ -31,9 +31,13 @@ jobs:
     - name: Kubectl tool installer
       uses: Azure/setup-kubectl@v4.0.0
 
+    - name: Debug kubeconfig
+      run: |
+        cat ~/.kube/config
+        
     - name: kubectl cluster-info
       run: kubectl cluster-info
-      
+
     - name: Debug kubeconfig
       run: |
         cat ~/.kube/config
