@@ -31,8 +31,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
     - name: Set up Kubectl
       uses: azure/setup-kubectl@v1
       with:
